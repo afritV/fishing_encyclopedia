@@ -53,6 +53,7 @@ class PostController extends Controller
         $post->save();
 
 
+
         return redirect()->back()->withSuccess('Статья была успешно добавлена');
     }
 
