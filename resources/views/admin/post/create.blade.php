@@ -13,7 +13,7 @@
             </div>
         @endif
         <!-- form start -->
-        <form method="post" action="{{route('category.store')}}">
+        <form method="post" action="{{route('post.store')}}">
             @csrf
             <div class="card-body">
                 <div class="form-group">
