@@ -48,7 +48,6 @@ class PostController extends Controller
         $post->img = '/'.$request -> img;
         $post->cat_id = $request -> cat_id;
         $post->save();
-        dd($post);
 
         return redirect()->back()->withSuccess('Статья была успешно добавлена');
     }
