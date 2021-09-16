@@ -26,10 +26,11 @@
 
             <div class="container-fluid">
                 <div class="row">
+                    @foreach($posts as $post)
                     <div class="col-6">
                         <!-- Default box -->
-                        @foreach($posts as $post)
-                            <div class="card">
+
+                            <div class="card-user card">
                                 <div class="card-header">
                                     <h3 class="card-title">{{$post -> title}}</h3>
 
@@ -42,7 +43,8 @@
                                 <div class="card-body text-center">
                                     <img class="img-post" src="{{$post -> img}}" alt="{{$post -> title}}">
                                     <div class="description">
-                                       <strong>{{$post->text}}</strong>
+
+                                       {!! $post -> text !!}
                                     </div>
                                     <div class="btn_wrapper text-right">
                                         <a href="{{route('show-post', $post->id)}}" class="btn mt-3 btn-lg btn-primary me-6">Подробнее</a>
@@ -51,10 +53,11 @@
 
 
                             </div>
-                        @endforeach
+
 
                         <!-- /.card -->
                     </div>
+                    @endforeach
                 </div>
             </div>
         </section>

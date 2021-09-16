@@ -20,31 +20,36 @@
                     <label >Добавить статью</label>
                     <input type="text" name="title" class="form-control"  placeholder="Введите название статьи" required>
                 </div>
-                @foreach($categories as $category)
+
                 <div class="form-group">
                     <label>Выбрать категорию</label>
                     <select name="cat_id" class="form-control" required>
 
-
+                        @foreach($categories as $category)
                             <option value="{{$category -> id}}">{{$category -> title}}</option>
-
-
+                            @if(count($category->subcategories)>0)
+                                @foreach($category->subcategories as $subcategory)
+                                    <option value="{{$subcategory -> id}}">&nbsp;&nbsp;{{$subcategory -> title}}</option>
+                                @endforeach
+                            @endif
+                        @endforeach
                     </select>
 
                 </div>
-                <div class="form-group">
-                    <label>Выбрать подкатегорию</label>
-                    <select name="cat_id" class="form-control" required>
+
+{{--                <div class="form-group">--}}
+{{--                    <label>Выбрать подкатегорию</label>--}}
+{{--                    <select name="cat_id" class="form-control" required>--}}
 
 
-                        <option value="{{$category -> subcategory['title']}}">{{$category -> subcategory['title']}}</option>
+{{--                        <option value="{{$category -> subcategory['title']}}">{{$category -> subcategory['title']}}</option>--}}
 
 
 
-                    </select>
-                </div>
+{{--                    </select>--}}
+{{--                </div>--}}
 
-                @endforeach
+
 
                 <div class="form-group">
                     <textarea class="editor" name="text"></textarea>

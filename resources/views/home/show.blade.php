@@ -10,7 +10,6 @@
     <div class="container">
 
         <section class="content">
-        @foreach($posts_all as $post)
             <!-- Default box -->
                 <div class="card card-solid">
                     <div class="card-body">
@@ -72,7 +71,7 @@
                                     </nav>
                                     <div class="tab-content p-3" id="nav-tabContent">
                                         <div class="editor tab-pane fade active show" id="product-desc" role="tabpanel"
-                                             aria-labelledby="product-desc-tab">{{$post->text}}
+                                             aria-labelledby="product-desc-tab">{!! $post->text !!}
                                         </div>
                                         <div class="tab-pane fade" id="product-comments" role="tabpanel"
                                              aria-labelledby="product-comments-tab"> Vivamus rhoncus nisl sed venenatis luctus.
@@ -107,7 +106,6 @@
                     <!-- /.card-body -->
                 </div>
                 <!-- /.card -->
-            @endforeach
 
 
         </section>

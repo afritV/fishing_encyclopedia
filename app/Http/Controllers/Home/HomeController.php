@@ -25,10 +25,8 @@ class HomeController extends Controller
      */
     public function show(Post $post)
     {
-        $posts_all = Post::orderBy('created_at','desc')->get();
         return view('home.show',[
-            '$post' => $post,
-            "posts_all" => $posts_all,
+            'post' => $post,
         ]);
     }
 }
