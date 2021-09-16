@@ -47,7 +47,7 @@
                                        {!! $post -> text !!}
                                     </div>
                                     <div class="btn_wrapper text-right">
-                                        <a href="{{route('show-post', $post->id)}}" class="btn mt-3 btn-lg btn-primary me-6">Подробнее</a>
+                                        <a href="{{route('show.post', $post->id)}}" class="btn mt-3 btn-lg btn-primary me-6">Подробнее</a>
                                     </div>
                                 </div>
 

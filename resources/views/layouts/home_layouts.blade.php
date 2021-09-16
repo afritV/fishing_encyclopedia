@@ -18,15 +18,16 @@
 </head>
 <body>
 <header>
+
     <div class=" container">
         <!-- Navbar -->
         <nav class="navbar-custom-style navbar navbar-expand">
             <!-- Left navbar links -->
             <ul class=" navbar-nav">
-                <li><h1 class="logo"><a href="{{route('/')}}"><img src="/admin/dist/img/animal-1299070.svg" alt="fishing">fishing-encyclopedia</a>
+                <li><h1 class="logo"><a href="{{route('home.index')}}"><img src="/admin/dist/img/animal-1299070.svg" alt="fishing">fishing-encyclopedia</a>
                     </h1></li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="{{route('/')}}" class="nav-link">Главная</a>
+                    <a href="{{route('home.index')}}" class="nav-link">Главная</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Категории</a>
@@ -38,7 +39,7 @@
                     @if (Route::has('login'))
                         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                             @auth
-                                <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                                <a href="{{ url('home') }}" class="text-sm text-gray-700 underline">Home</a>
                             @else
                                 <a href="{{ route('login') }}" class="btn-user btn btn-outline-primary me-2">Войти</a>
 

@@ -17,8 +17,8 @@ use \App\Http\Controllers\Admin;
 |
 */
 
-Route::get('/', [App\Http\Controllers\Home\HomeController::class, 'index'])->name('/');
-Route::get('/home/{post}', [App\Http\Controllers\Home\HomeController::class, 'show'])->name('show-post');
+Route::get('/', [App\Http\Controllers\Home\HomeController::class, 'index'])->name('home.index');
+Route::get('/home/{post}', [App\Http\Controllers\Home\HomeController::class, 'show'])->name('show.post');
 
 Auth::routes();
 
