@@ -26,7 +26,7 @@
 
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-6">
                         <!-- Default box -->
                         @foreach($posts as $post)
                             <div class="card">
@@ -37,18 +37,18 @@
                                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                                             <i class="fas fa-minus"></i>
                                         </button>
-                                        <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                                            <i class="fas fa-times"></i>
-                                        </button>
                                     </div>
                                 </div>
-                                <div class="card-image">
-                                    {{$post -> img}}
+                                <div class="card-body text-center">
+                                    <img class="img-post" src="{{$post -> img}}" alt="{{$post -> title}}">
+                                    <div class="description">
+                                       <strong>{{$post->text}}</strong>
+                                    </div>
+                                    <div class="btn_wrapper text-right">
+                                        <a href="{{route('show-post', $post->id)}}" class="btn mt-3 btn-lg btn-primary me-6">Подробнее</a>
+                                    </div>
+                                </div>
 
-                                </div>
-                                <div class="card-body">
-                                    {{$post -> text}}
-                                </div>
 
                             </div>
                         @endforeach

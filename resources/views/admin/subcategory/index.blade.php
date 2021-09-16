@@ -47,7 +47,7 @@
                             {{ $subcategory -> title }}
                         </td>
                         <td>
-                            {{ $subcategory -> category_id}}
+                            {{ $subcategory -> category['title']}}
                         </td>
 
                         <td class="text-center">

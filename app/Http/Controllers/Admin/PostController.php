@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\Subcategory;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -30,9 +31,11 @@ class PostController extends Controller
     public function create()
     {
         $categories = Category::orderBy('created_at','desc')->get();
+        $subCategories = Subcategory::orderBy('created_at','desc')->get();
 
         return view('admin.post.create',[
             'categories' => $categories,
+            "subCategories" => $subCategories,
         ]);
 
     }
@@ -65,7 +68,9 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('home.show',[
+            '$post' => $post,
+        ]);
     }
 
     /**

@@ -23,13 +23,13 @@
         <nav class="navbar-custom-style navbar navbar-expand">
             <!-- Left navbar links -->
             <ul class=" navbar-nav">
-                <li><h1 class="logo"><a href="#"><img src="/admin/dist/img/animal-1299070.svg" alt="fishing">fishing-encyclopedia</a>
+                <li><h1 class="logo"><a href="{{route('/')}}"><img src="/admin/dist/img/animal-1299070.svg" alt="fishing">fishing-encyclopedia</a>
                     </h1></li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Home</a>
+                    <a href="{{route('/')}}" class="nav-link">Главная</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="#" class="nav-link">Категории</a>
                 </li>
             </ul>
             <!-- Right navbar links -->

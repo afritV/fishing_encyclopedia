@@ -60,3 +60,7 @@ header::before {
 
 /*End header style*/
 /*Begin main content style*/
+
+.img-post{
+    width: 60%;
+}

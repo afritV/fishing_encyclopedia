@@ -16,4 +16,19 @@ class HomeController extends Controller
         ]);
 
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Post  $post
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Post $post)
+    {
+        $posts_all = Post::orderBy('created_at','desc')->get();
+        return view('home.show',[
+            '$post' => $post,
+            "posts_all" => $posts_all,
+        ]);
+    }
 }
