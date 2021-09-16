@@ -118,6 +118,28 @@
                         </ul>
                     </li>
 
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon  fas fa-envelope-open-text"></i>
+                            <p>
+                                Подкатегории
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{route('subcategory.index')}}" class="nav-link ">
+                                    <p>Все подкатегории</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('subcategory.create')}}" class="nav-link">
+                                    <p>Добавить подкатегорию</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
 
 
                 </ul>

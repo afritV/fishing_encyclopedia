@@ -12,10 +12,11 @@
                 <button type="button" class="close" data-dismiss="alert" aria-hidden=""></button>
                 <h4><i class="icon fa fa-check"> {{ session('success') }}</i></h4>
             </div>
-        @endif
-        <!-- form start -->
-        <form method="post" action="{{route('subcategory.store')}}">
+    @endif
+    <!-- form start -->
+        <form method="post" action="{{route('subcategory.update', $subcategory -> id )}}">
             @csrf
+            @method('PUT')
             <div class="card-body">
                 <div class="form-group">
                     <label>Выбрать подкатегорию</label>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\SubcategoryController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Admin;
 
@@ -16,9 +17,8 @@ use \App\Http\Controllers\Admin;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\Home\HomeController::class, 'index'])->name('/');
+
 
 Auth::routes();
 
@@ -29,6 +29,7 @@ Route::middleware(['role:admin'])->prefix('admin_panel')->group(function () {
     Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('home-admin');
 
     Route::resource('category', CategoryController::class);
+    Route::resource('subcategory', SubcategoryController::class );
     Route::resource('post', PostController::class);
 });
 

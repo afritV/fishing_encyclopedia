@@ -1,0 +1,62 @@
+/*Begin header style*/
+header {
+    padding: 15px 0;
+    min-height: 40vh;
+    background: url('../img/fisherman-1559753_1920.jpg') center bottom / cover no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(165, 160, 160, 0.7);
+    z-index: -1;
+}
+
+/*Begin navbar style*/
+.navbar-custom-style {
+    transition: all 5s;
+}
+
+.navbar-custom-style a {
+    color: #fff3cd;
+}
+
+.navbar-custom-style a:hover {
+    border-bottom: 1px solid #007BFF;
+}
+
+.logo {
+    margin-right: 5rem;
+}
+
+.logo img {
+    width: 5rem;
+    display: block;
+    line-height: 20px;
+    position: absolute;
+}
+
+.logo a {
+    font-size: small;
+    text-decoration: none;
+    color: #fff3cd;
+}
+
+.logo a:hover {
+    border-bottom: none;
+}
+
+.btn-user {
+    border-color: #fff3cd;
+    color: #fff3cd;
+
+}
+
+/*End header style*/
+/*Begin main content style*/

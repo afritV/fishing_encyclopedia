@@ -29,28 +29,34 @@
                         <th>
                             Название категории
                         </th>
+                        <th>
+                            Принадлежит категории
+                        </th>
 
 
 
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($categories as $category)
+                    @foreach($subcategories as $subcategory)
                     <tr>
                         <td>
-                            {{ $category -> id }}
+                            {{ $subcategory -> id }}
                         </td>
                         <td>
-                            {{ $category -> title }}
+                            {{ $subcategory -> title }}
+                        </td>
+                        <td>
+                            {{ $subcategory -> category_id}}
                         </td>
 
                         <td class="text-center">
-                            <a class="btn btn-info btn-sm" href="{{route('category.edit',$category['id'])}}">
+                            <a class="btn btn-info btn-sm" href="{{route('subcategory.edit',$subcategory['id'])}}">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Редактировать
                             </a>
-                            <form method="Post" style="display: inline" action="{{route('category.destroy',$category['id'])}}">
+                            <form method="Post" style="display: inline" action="{{route('subcategory.destroy', $subcategory['id'] )}}">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm" href="#">
