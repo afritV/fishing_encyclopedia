@@ -12,26 +12,28 @@
                 <button type="button" class="close" data-dismiss="alert" aria-hidden=""></button>
                 <h4><i class="icon fa fa-check"> {{ session('success') }}</i></h4>
             </div>
-    @endif
-    <!-- form start -->
-        <form method="post" action="{{route('option.store')}}">
+        @endif
+        <!-- form start -->
+        <form method="post" action="{{route('option.update')}}">
             @csrf
             <div class="card-body">
                 <div class="form-group">
-                    <label>Выбрать подкатегорию</label>
+                    <label>Выбрать пост</label>
                     <select name="category_id" class="form-control" required>
 
-                        @foreach($categories as $category)
-                            <option value="{{$category -> id}}">{{$category -> title}}</option>
+                        @foreach($posts as $post)
+                            <option value="{{$post -> id}}">{{$post -> title}}</option>
                         @endforeach
 
                     </select>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="name" class="form-control"  placeholder="Введите название опции" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="value" class="form-control"  placeholder="Введите значение опции" >
+                    <label >Заполнить дополнительные опции</label>
+                    @foreach($options as $option)
+                        <input type="text" value="{{$option->name}}" name="name" class="form-control"  required>
+                        <input type="text" value="{{$option->value}}" name="name" class="form-control"  required>
+                        <br>
+                    @endforeach
                 </div>
             </div>
             <!-- /.card-body -->

@@ -93,6 +93,11 @@
                                     <p>Добавить снасть</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{route('option.index')}}" class="nav-link">
+                                    <p>Добавить опцию для снасти</p>
+                                </a>
+                            </li>
                         </ul>
                     </li>
 
@@ -117,11 +122,32 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('option.create')}}" class="nav-link">
-                                    <p>Добавить опции для категории</p>
+                                    <p>Добавить опции</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
+{{--                    <li class="nav-item">--}}
+{{--                        <a href="#" class="nav-link">--}}
+{{--                            <i class="nav-icon  fas fa-align-left"></i>--}}
+{{--                            <p>--}}
+{{--                                Дополнительный опции категорий--}}
+{{--                                <i class="right fas fa-angle-left"></i>--}}
+{{--                            </p>--}}
+{{--                        </a>--}}
+{{--                        <ul class="nav nav-treeview">--}}
+{{--                            <li class="nav-item">--}}
+{{--                                <a href="{{route('category.create')}}" class="nav-link">--}}
+{{--                                    <p>Добавить опцию</p>--}}
+{{--                                </a>--}}
+{{--                            </li>--}}
+{{--                            <li class="nav-item">--}}
+{{--                                <a href="{{route('option.create')}}" class="nav-link">--}}
+{{--                                    <p>Добавить опции для категории</p>--}}
+{{--                                </a>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
 
                     <li class="nav-item">
                         <a href="#" class="nav-link">

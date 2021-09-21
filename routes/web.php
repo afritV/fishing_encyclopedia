@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\SubcategoryController;
+use App\Http\Controllers\Admin\OptionController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Admin;
 
@@ -29,7 +30,7 @@ Route::middleware(['role:admin'])->prefix('admin_panel')->group(function () {
     Route::resource('category', CategoryController::class);
     Route::resource('subcategory', SubcategoryController::class );
     Route::resource('post', PostController::class);
-    Route::resource('option', Admin\OptionController::class);
+    Route::resource('option', OptionController::class);
 });
 
 
