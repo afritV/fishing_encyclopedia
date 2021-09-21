@@ -29,6 +29,7 @@ Route::middleware(['role:admin'])->prefix('admin_panel')->group(function () {
     Route::resource('category', CategoryController::class);
     Route::resource('subcategory', SubcategoryController::class );
     Route::resource('post', PostController::class);
+    Route::resource('option', Admin\OptionController::class);
 });
 
 

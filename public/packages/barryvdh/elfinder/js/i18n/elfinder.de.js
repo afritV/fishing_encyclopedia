@@ -32,7 +32,7 @@
 			'errUnknownCmd'        : 'Unbekannter Befehl.',
 			'errJqui'              : 'Ungültige jQuery UI-Konfiguration. Die Komponenten Selectable, Draggable und Droppable müssen inkludiert sein.',
 			'errNode'              : 'Für elFinder muss das DOM-Element erstellt werden.',
-			'errURL'               : 'Ungültige elFinder-Konfiguration! Die URL-Option ist nicht gesetzt.',
+			'errURL'               : 'Ungültige elFinder-Konfiguration! Die URL-OptionController ist nicht gesetzt.',
 			'errAccess'            : 'Zugriff verweigert.',
 			'errConnect'           : 'Verbindung zum Backend fehlgeschlagen.',
 			'errAbort'             : 'Verbindung abgebrochen.',
