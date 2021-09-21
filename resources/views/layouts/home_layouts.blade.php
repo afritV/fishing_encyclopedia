@@ -25,7 +25,8 @@
         <nav class="navbar-custom-style navbar navbar-expand">
             <!-- Left navbar links -->
             <ul class=" navbar-nav">
-                <li><h1 class="logo"><a href="{{route('home.index')}}"><img src="/admin/dist/img/animal-1299070.svg" alt="fishing">fishing-encyclopedia</a>
+                <li><h1 class="logo"><a href="{{route('home.index')}}"><img src="/admin/dist/img/animal-1299070.svg"
+                                                                            alt="fishing">fishing-encyclopedia</a>
                     </h1></li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="{{route('home.index')}}" class="nav-link">Главная</a>
@@ -34,48 +35,38 @@
                     <a href="#" class="nav-link">Категории</a>
                 </li>
             </ul>
-            <!-- Right navbar links -->
-            <ul class="navbar-nav ml-auto">
-                <li style="margin-left: 3rem">
-                    @if (Route::has('login'))
-                        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                            @auth
-                                <a href="{{ url('home.index') }}" class="text-sm text-gray-700 underline">Home</a>
-                            @else
-                                <a href="{{ route('login') }}" class="btn-user btn btn-outline-primary me-2">Войти</a>
-
-                                @if (Route::has('register'))
-                                    <a href="{{ route('register') }}" class="btn-user btn btn-outline-primary me-2">Регистрация</a>
-                                @endif
-                            @endauth
-                        </div>
-                    @endif
-                </li>
-            </ul>
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
                 @guest
                     @if (Route::has('login'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Войти') }}</a>
+                            <a class="btn-user btn btn-outline-primary me-2 mr-1"
+                               href="{{ route('login') }}">{{ __('Войти') }}</a>
                         </li>
                     @endif
 
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Зарегистрироваться') }}</a>
+                            <a class="btn-user btn btn-outline-primary me-2"
+                               href="{{ route('register') }}">{{ __('Зарегистрироваться') }}</a>
                         </li>
                     @endif
                 @else
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" class=" nav-link dropdown-toggle " href="#" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
                         </a>
 
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-user" aria-labelledby="navbarDropdown">
+                            @if(Auth::user()->name === 'admin')
+                                <a class="dropdown-item" href="{{ route("home-admin") }}"> Админ Панель</a>
+                            @endif
+
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                               document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
 

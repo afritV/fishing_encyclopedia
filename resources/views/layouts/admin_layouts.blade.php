@@ -115,6 +115,11 @@
                                     <p>Добавить категорию</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{route('option.create')}}" class="nav-link">
+                                    <p>Добавить опции для категории</p>
+                                </a>
+                            </li>
                         </ul>
                     </li>
 
@@ -138,6 +143,7 @@
                                 </a>
                             </li>
                         </ul>
+
                     </li>
 
 

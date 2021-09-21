@@ -65,4 +65,10 @@ header::before {
     width: 60%;
 }
 
+.dropdown-menu-user{
+    background-color: rgba(102, 153, 189, 0.36);
+    transition: 0.1s all;
+
+}
+
 
