@@ -8,7 +8,7 @@
 // call its methods to activate the assisting functions that Tern
 // provides.
 //
-// Options supported (all optional):
+// Option supported (all optional):
 // * defs: An array of JSON definition data structures.
 // * plugins: An object mapping plugin names to configuration
 //   options.

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -21,11 +22,13 @@ class HomeController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Post  $post
+     * @param  \App\Models\Category $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show(Post $post, Category $category)
     {
         return view('home.show',[
+            'category'=>$category,
             'post' => $post,
         ]);
     }

@@ -71,7 +71,7 @@
 	 * be  accessed.
 	 *
 	 *  @class
-	 *  @param {object} [init={}] Configuration object for DataTables. Options
+	 *  @param {object} [init={}] Configuration object for DataTables. Option
 	 *    are defined by {@link DataTable.defaults}
 	 *  @requires jQuery 1.7+
 	 *
@@ -10400,7 +10400,7 @@
 		 *  @type boolean
 		 *  @default false
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @name DataTable.defaults.destroy
 		 *
 		 *  @example
@@ -10533,7 +10533,7 @@
 		 *  @type boolean
 		 *  @default false
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @name DataTable.defaults.retrieve
 		 *
 		 *  @example
@@ -10570,7 +10570,7 @@
 		 *  @type boolean
 		 *  @default false
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @name DataTable.defaults.scrollCollapse
 		 *
 		 *  @example
@@ -10631,7 +10631,7 @@
 		 *  @type boolean
 		 *  @default true
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @name DataTable.defaults.orderMulti
 		 *
 		 *  @example
@@ -10652,7 +10652,7 @@
 		 *  @type boolean
 		 *  @default false
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @name DataTable.defaults.orderCellsTop
 		 *
 		 *  @example
@@ -11194,7 +11194,7 @@
 		 *  @type int
 		 *  @default 7200 <i>(2 hours)</i>
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @name DataTable.defaults.stateDuration
 		 *
 		 *  @example
@@ -11222,7 +11222,7 @@
 		 *  @type int | array
 		 *  @default null
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @name DataTable.defaults.deferLoading
 		 *
 		 *  @example
@@ -11258,7 +11258,7 @@
 		 *  @type int
 		 *  @default 10
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @name DataTable.defaults.pageLength
 		 *
 		 *  @example
@@ -11279,7 +11279,7 @@
 		 *  @type int
 		 *  @default 0
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @name DataTable.defaults.displayStart
 		 *
 		 *  @example
@@ -11302,7 +11302,7 @@
 		 *  @type int
 		 *  @default 0
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @name DataTable.defaults.tabIndex
 		 *
 		 *  @example
@@ -11854,7 +11854,7 @@
 		 *  @namespace
 		 *  @extends DataTable.models.oSearch
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @name DataTable.defaults.search
 		 *
 		 *  @example
@@ -11879,7 +11879,7 @@
 		 *  @type string
 		 *  @default data
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @dtopt Server-side
 		 *  @name DataTable.defaults.ajaxDataProp
 		 *
@@ -11898,7 +11898,7 @@
 		 *  @type string
 		 *  @default null
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @dtopt Server-side
 		 *  @name DataTable.defaults.ajaxSource
 		 *
@@ -11948,7 +11948,7 @@
 		 *  @default lfrtip <i>(when `jQueryUI` is false)</i> <b>or</b>
 		 *    <"H"lfr>t<"F"ip> <i>(when `jQueryUI` is true)</i>
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @name DataTable.defaults.dom
 		 *
 		 *  @example
@@ -11968,7 +11968,7 @@
 		 *  @type integer
 		 *  @default 0
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @name DataTable.defaults.searchDelay
 		 *
 		 *  @example
@@ -11996,7 +11996,7 @@
 		 *  @type string
 		 *  @default simple_numbers
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @name DataTable.defaults.pagingType
 		 *
 		 *  @example
@@ -12044,7 +12044,7 @@
 		 *  @type string
 		 *  @default <i>blank string - i.e. disabled</i>
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @name DataTable.defaults.scrollXInner
 		 *
 		 *  @example
@@ -12091,7 +12091,7 @@
 		 *  @type string
 		 *  @default GET
 		 *
-		 *  @dtopt Options
+		 *  @dtopt Option
 		 *  @dtopt Server-side
 		 *  @name DataTable.defaults.serverMethod
 		 *
@@ -14091,7 +14091,7 @@
 		 * take three attributes:
 		 *
 		 * * Settings object for the host table
-		 * * Options object (`selector-modifier` object type)
+		 * * Option object (`selector-modifier` object type)
 		 * * Array of selected item indexes
 		 *
 		 * The return is an array of the resulting item indexes after the custom

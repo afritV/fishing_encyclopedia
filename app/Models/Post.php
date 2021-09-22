@@ -14,7 +14,7 @@ class Post extends Model
     }
 
     public function option(){
-        return $this->hasMany(Options::class);
+        return $this->hasMany(Option::class);
     }
 
 

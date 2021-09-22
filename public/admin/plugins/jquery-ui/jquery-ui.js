@@ -2624,7 +2624,7 @@ function standardAnimationOption( option ) {
 		return true;
 	}
 
-	// Options hash (but not naming an effect)
+	// Option hash (but not naming an effect)
 	if ( typeof option === "object" && !option.effect ) {
 		return true;
 	}
@@ -7253,7 +7253,7 @@ function Datepicker() {
 		showOn: "focus", // "focus" for popup on focus,
 			// "button" for trigger button, or "both" for either
 		showAnim: "fadeIn", // Name of jQuery animation for popup
-		showOptions: {}, // Options for enhanced animations
+		showOptions: {}, // Option for enhanced animations
 		defaultDate: null, // Used when field is blank: actual date,
 			// +/-number for offset from today, null for today
 		appendText: "", // Display text following the input box, e.g. showing the format

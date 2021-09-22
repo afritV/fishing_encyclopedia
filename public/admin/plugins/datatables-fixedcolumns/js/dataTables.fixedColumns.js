@@ -68,7 +68,7 @@ var _firefoxScroll;
  *  @param {object} dt DataTables instance. With DataTables 1.10 this can also
  *    be a jQuery collection, a jQuery selector, DataTables API instance or
  *    settings object.
- *  @param {object} [init={}] Configuration object for FixedColumns. Options are
+ *  @param {object} [init={}] Configuration object for FixedColumns. Option are
  *    defined by {@link FixedColumns.defaults}
  *
  *  @requires jQuery 1.7+

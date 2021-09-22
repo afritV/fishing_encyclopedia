@@ -4,9 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
-use App\Models\Options;
+use App\Models\Option;
 use App\Models\Post;
-use App\Models\Subcategory;
 use Illuminate\Http\Request;
 
 class OptionController extends Controller
@@ -16,15 +15,9 @@ class OptionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $posts = Post::orderBy('created_at','desc')->get();
-        $options = Options::orderBy('created_at','desc')->get();
-        return view('admin.option.index', [
-            "options" => $options,
-            "posts" => $posts,
-        ]);
+        public function index(){
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -49,7 +42,7 @@ class OptionController extends Controller
      */
     public function store(Request $request)
     {
-        $new_option = new Options();
+        $new_option = new Option();
         $new_option->name = $request -> name;
         $new_option->value = $request -> value;
         $new_option->category_id = $request -> category_id;
@@ -57,22 +50,58 @@ class OptionController extends Controller
         return redirect()->back()->withSuccess('Опция была успешно добавлена');
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Option  $option
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Option $option)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Option  $options
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Option $option)
+    {
+
+        $posts = Post::orderBy('created_at','desc')->get();
+//        $options= Option::orderBy('created_at','desc')->get();
+        return view('admin.option.edit', [
+            "option" => $option,
+            "posts" => $posts,
+        ]);
+    }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Subcategory  $subcategory
+     * @param  \App\Models\Option  $option
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Option $option)
     {
-        dd($request);
+        dd($option);
         $subcategory->title = $request -> title;
         $subcategory->category_id = $request -> category_id;
         $subcategory->save();
         return redirect()->back()->withSuccess('Подкатегория была успешно обновлена');
     }
 
-
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Option  $option
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Option $option)
+    {
+        //
+    }
 }

@@ -4845,7 +4845,7 @@
       },
       set: function(cm, params) {
         var setArgs = params.args;
-        // Options passed through to the setOption/getOption calls. May be passed in by the
+        // Option passed through to the setOption/getOption calls. May be passed in by the
         // local/global versions of the set command
         var setCfg = params.setCfg || {};
         if (!setArgs || setArgs.length < 1) {

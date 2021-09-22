@@ -82,7 +82,7 @@ var DataTable = $.fn.dataTable;
  *  @constructor
  *  @global
  *  @param {object} dt DataTables settings object or API instance
- *  @param {object} [opts={}] Configuration object for FixedColumns. Options 
+ *  @param {object} [opts={}] Configuration object for FixedColumns. Option
  *    are defined by {@link Scroller.defaults}
  *
  *  @requires jQuery 1.7+
@@ -315,7 +315,7 @@ $.extend( Scroller.prototype, {
 	*/
 	pageInfo: function()
 	{
-		var 
+		var
 			dt = this.s.dt,
 			iScrollTop = this.dom.scroller.scrollTop,
 			iTotal = dt.fnRecordsDisplay(),
@@ -549,7 +549,7 @@ $.extend( Scroller.prototype, {
 		}
 
 		this.measure( false );
-	
+
 		that.s.stateSaveThrottle = that.s.dt.oApi._fnThrottle( function () {
 			that.s.dtApi.state.save();
 		}, 500 );
@@ -630,7 +630,7 @@ $.extend( Scroller.prototype, {
                 tbody.append('<tr><td>&#160;</td></tr>');
             }
 		}
-	
+
 		$('div.'+dt.oClasses.sScrollBody, container).append( nTable );
 
 		// If initialised using `dom`, use the holding element as the insert point
@@ -761,7 +761,7 @@ $.extend( Scroller.prototype, {
 	 * had scrolling containers of infinite height (i.e. the absolute value)
 	 *
 	 *  @param {string} dir Domain transform direction, `virtualToPhysical` or
-	 *    `physicalToVirtual` 
+	 *    `physicalToVirtual`
 	 *  @returns {number} Calculated transform
 	 *  @private
 	 */

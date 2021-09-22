@@ -45,6 +45,11 @@
                         </td>
 
                         <td class="text-center">
+                            <a class="btn btn-warning btn-sm" href="{{route('option.edit',$post['id'])}}">
+                                <i class="fas fa-pencil-alt">
+                                </i>
+                                Добавить опцию
+                            </a>
                             <a class="btn btn-info btn-sm" href="{{route('post.edit',$post['id'])}}">
                                 <i class="fas fa-pencil-alt">
                                 </i>

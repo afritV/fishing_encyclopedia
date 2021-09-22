@@ -1532,7 +1532,7 @@ function getAlpha(string) {
 // generators
 function hexString(rgba, a) {
    var a = (a !== undefined && rgba.length === 3) ? a : rgba[3];
-   return "#" + hexDouble(rgba[0]) 
+   return "#" + hexDouble(rgba[0])
               + hexDouble(rgba[1])
               + hexDouble(rgba[2])
               + (
@@ -4392,7 +4392,7 @@ var element_line = core_element.extend({
 
 		ctx.save();
 
-		// Stroke Line Options
+		// Stroke Line Option
 		ctx.lineCap = vm.borderCapStyle || globalOptionLineElements.borderCapStyle;
 
 		// IE 9 and 10 do not support line dash

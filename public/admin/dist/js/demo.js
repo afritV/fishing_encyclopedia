@@ -76,7 +76,7 @@
   var $dark_mode_container = $('<div />', { class: 'mb-4' }).append($dark_mode_checkbox).append('<span>Dark Mode</span>')
   $container.append($dark_mode_container)
 
-  $container.append('<h6>Header Options</h6>')
+  $container.append('<h6>Header Option</h6>')
   var $header_fixed_checkbox = $('<input />', {
     type: 'checkbox',
     value: 1,
@@ -122,7 +122,7 @@
   var $no_border_container = $('<div />', { class: 'mb-4' }).append($no_border_checkbox).append('<span>No border</span>')
   $container.append($no_border_container)
 
-  $container.append('<h6>Sidebar Options</h6>')
+  $container.append('<h6>Sidebar Option</h6>')
 
   var $sidebar_collapsed_checkbox = $('<input />', {
     type: 'checkbox',
@@ -300,7 +300,7 @@
   var $no_expand_sidebar_container = $('<div />', { class: 'mb-4' }).append($no_expand_sidebar_checkbox).append('<span>Disable Hover/Focus Auto-Expand</span>')
   $container.append($no_expand_sidebar_container)
 
-  $container.append('<h6>Footer Options</h6>')
+  $container.append('<h6>Footer Option</h6>')
   var $footer_fixed_checkbox = $('<input />', {
     type: 'checkbox',
     value: 1,
@@ -316,7 +316,7 @@
   var $footer_fixed_container = $('<div />', { class: 'mb-4' }).append($footer_fixed_checkbox).append('<span>Fixed</span>')
   $container.append($footer_fixed_container)
 
-  $container.append('<h6>Small Text Options</h6>')
+  $container.append('<h6>Small Text Option</h6>')
 
   var $text_sm_body_checkbox = $('<input />', {
     type: 'checkbox',

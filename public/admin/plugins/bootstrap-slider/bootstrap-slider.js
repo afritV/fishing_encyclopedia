@@ -1,5 +1,5 @@
 /*! =======================================================
-                      VERSION  11.0.2              
+                      VERSION  11.0.2
 ========================================================= */
 "use strict";
 
@@ -358,7 +358,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 			}
 
 			/*************************************************
-   					Process Options
+   					Process Option
    	**************************************************/
 			options = options ? options : {};
 			var optionTypes = Object.keys(this.defaultOptions);

@@ -28,14 +28,26 @@
 
                             @foreach($categories as $category)
                                 <option value="{{$category -> id}}">{{$category -> title}}</option>
-                                @if(count($category->subcategories)>0)
-                                    @foreach($category->subcategories as $subcategory)
-                                        <option value="{{$subcategory -> id}}">&nbsp;&nbsp;{{$subcategory -> title}}</option>
-                                    @endforeach
-                                @endif
+{{--                                @if(count($category->options)>0)--}}
+{{--                                    @foreach($category->options as $option)--}}
+{{--                                        <option value="{{$option -> id}}">&nbsp;&nbsp;{{$option -> name}}</option>--}}
+{{--                                        <option value="{{$option -> id}}">&nbsp;&nbsp;{{$option -> value}}</option>--}}
+{{--                                    @endforeach--}}
+{{--                                @endif--}}
                             @endforeach
                         </select>
 
+                    </div>
+
+                    <div class="form-group">
+                        <label>Добавить опцию</label>
+                        @if(count($category->options)>0)
+                            @foreach($category->options as $option)
+
+                                <p>{{$option -> name}}</p>
+                                <p><input type="text" value="{{$option -> value}}" ></p>
+                            @endforeach
+                        @endif
                     </div>
 
                     <div class="form-group">

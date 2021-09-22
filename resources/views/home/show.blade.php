@@ -54,6 +54,16 @@
                                 <h3 class="my-3">{{$post -> title}}</h3>
                                 <hr>
 
+                                <div class="form-group">
+                                    @if(count($category->options)>0)
+                                        @foreach($category->options as $option)
+
+                                            <p>{{$option -> name}}</p>
+                                            <p><input type="text" value="{{$option -> value}}" ></p>
+                                        @endforeach
+                                    @endif
+                                </div>
+
 
                                 <div class="mt-4">
                                     <nav class="w-100">

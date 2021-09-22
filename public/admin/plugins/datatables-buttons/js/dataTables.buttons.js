@@ -959,7 +959,7 @@ $.extend( Buttons.prototype, {
 	 * Display (and replace if there is an existing one) a popover attached to a button
 	 * @param {string|node} content Content to show
 	 * @param {DataTable.Api} hostButton DT API instance of the button
-	 * @param {object} inOpts Options (see object below for all options)
+	 * @param {object} inOpts Option (see object below for all options)
 	 */
 	_popover: function ( content, hostButton, inOpts ) {
 		var dt = hostButton;

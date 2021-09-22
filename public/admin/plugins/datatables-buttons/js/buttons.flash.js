@@ -668,7 +668,7 @@ function createCellPos( n ){
  *
  * @param  {object} doc      XML document
  * @param  {string} nodeName Node name
- * @param  {object} opts     Options - can be `attr` (attributes), `children`
+ * @param  {object} opts     Option - can be `attr` (attributes), `children`
  *   (child nodes) and `text` (text content)
  * @return {node}            Created node
  */
@@ -1398,7 +1398,7 @@ DataTable.ext.buttons.excelFlash = $.extend( {}, flashButton, {
 	},
 
 	extension: '.xlsx',
-	
+
 	createEmptyCells: false
 } );
 

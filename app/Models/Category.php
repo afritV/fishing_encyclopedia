@@ -14,7 +14,7 @@ class Category extends Model
     }
 
     public function options(){
-        return $this->hasMany(Options::class);
+        return $this->hasMany(Option::class);
     }
 
 
