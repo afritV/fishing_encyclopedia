@@ -13,9 +13,14 @@ class Post extends Model
         return $this->hasMany(Subcategory::class, 'subcategory');
     }
 
-    public function option(){
-        return $this->hasMany(Option::class);
+    public function category(){
+        return $this->belongsTo(Category::class);
     }
+
+    //todo delete
+//    public function option(){
+//        return $this->hasMany(Option::class);
+//    }
 
 
 }

@@ -69,6 +69,7 @@ class OptionController extends Controller
      */
     public function edit(Option $option)
     {
+        dd($option);
 
         $posts = Post::orderBy('created_at','desc')->get();
 //        $options= Option::orderBy('created_at','desc')->get();

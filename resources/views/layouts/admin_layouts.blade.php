@@ -93,11 +93,6 @@
                                     <p>Добавить снасть</p>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="{{route('option.index')}}" class="nav-link">
-                                    <p>Добавить опцию для снасти</p>
-                                </a>
-                            </li>
                         </ul>
                     </li>
 
