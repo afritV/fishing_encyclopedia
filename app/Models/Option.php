@@ -14,8 +14,8 @@ class Option extends Model
         return $this->BelongsTo(Category::class);
     }
 
-    public function tackle()
+    public function optionValue()
     {
-        return $this->BelongsToMany(Category::class);
+        return $this->hasMany(OptionValue::class);
     }
 }

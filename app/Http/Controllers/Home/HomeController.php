@@ -27,6 +27,7 @@ class HomeController extends Controller
      */
     public function show(Tackle $tacles)
     {
+
         return view('home.show',[
             "tacles" => $tacles,
         ]);

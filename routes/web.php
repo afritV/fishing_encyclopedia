@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TackleController;
 use App\Http\Controllers\Admin\SubcategoryController;
 use App\Http\Controllers\Admin\OptionController;
+use App\Http\Controllers\Admin\ValueOptionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home\HomeController;
 use \App\Http\Controllers\Admin;
@@ -32,6 +33,7 @@ Route::middleware(['role:admin'])->prefix('admin_panel')->group(function () {
     Route::resource('subcategory', SubcategoryController::class );
     Route::resource('tacles', TackleController::class);
     Route::resource('option', OptionController::class);
+    Route::resource('value', ValueOptionController::class);
 });
 
 

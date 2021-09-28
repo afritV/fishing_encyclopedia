@@ -10,7 +10,7 @@ class Tackle extends Model
     use HasFactory;
 
     public function options(){
-        return $this->belongsToMany(Option::class,'tackle_options');
+        return $this->hasMany(OptionValue::class);
     }
 
     public function category(){

@@ -49,7 +49,6 @@ class OptionController extends Controller
     {
         $new_option = new Option();
         $new_option->name = $request -> name;
-        $new_option->value = $request -> value;
         $new_option->category_id = $request -> category_id;
         $new_option->save();
         return redirect()->back()->withSuccess('Опция была успешно добавлена');

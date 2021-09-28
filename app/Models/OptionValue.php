@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class OptionValue extends Model
 {
     use HasFactory;
+
+    public function option(){
+        return $this->BelongsTo(Option::class);
+    }
 }

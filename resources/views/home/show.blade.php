@@ -54,15 +54,13 @@
                                 <h3 class="my-3">{{$tacles -> title}}</h3>
                                 <hr>
 
-{{--                                <div class="form-group">--}}
-{{--                                    @if(count($category->options)>0)--}}
-{{--                                        @foreach($category->options as $option)--}}
+                                <div class="form-group">
 
-{{--                                            <p>{{$option -> name}}</p>--}}
-{{--                                            <p><input type="text" value="{{$option -> value}}" ></p>--}}
-{{--                                        @endforeach--}}
-{{--                                    @endif--}}
-{{--                                </div>--}}
+                                        @foreach($tacles->options as $option)
+                                            <p>{{$option -> value}}</p>
+                                        @endforeach
+
+                                </div>
 
 
                                 <div class="mt-4">
