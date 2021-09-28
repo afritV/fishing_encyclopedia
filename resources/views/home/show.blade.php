@@ -57,7 +57,7 @@
                                 <div class="form-group">
 
                                         @foreach($tacles->options as $option)
-                                            <p>{{$option -> value}}</p>
+                                            <p>{{$option->option->name}} => {{$option -> value}}</p>
                                         @endforeach
 
                                 </div>
