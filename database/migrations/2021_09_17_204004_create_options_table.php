@@ -17,7 +17,6 @@ class CreateOptionsTable extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->string('value')->nullable();
-            $table->foreignId('category_id')->constrained();
             $table->timestamps();
         });
     }

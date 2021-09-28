@@ -9,13 +9,13 @@ class Option extends Model
 {
     use HasFactory;
 
-    public function category()
-    {
-        return $this->BelongsToMany(Category::class);
-    }
-
-    public function tacle()
-    {
-        return $this->BelongsToMany(Category::class);
-    }
+//    public function category()
+//    {
+//        return $this->BelongsToMany(Category::class);
+//    }
+//
+//    public function tacle()
+//    {
+//        return $this->BelongsToMany(Category::class);
+//    }
 }

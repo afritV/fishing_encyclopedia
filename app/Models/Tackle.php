@@ -13,8 +13,8 @@ class Tackle extends Model
 //        return $this->hasManyThrough(Option::class, Category::class);
 //    }
 
-    public function category(){
-        return $this->belongsTo(Category::class);
-    }
+//    public function category(){
+//        return $this->belongsTo(Category::class);
+//    }
 
 }

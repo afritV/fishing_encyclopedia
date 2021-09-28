@@ -15,8 +15,8 @@ class CreateTackleOptionsTable extends Migration
     {
         Schema::create('tackle_options', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('tackle_id')->constrained();
-            $table->foreignId('option_id')->constrained();
+            $table->foreignId('tackle_id')->nullable()->constrained();
+            $table->foreignId('option_id')->nullable()->constrained();
             $table->timestamps();
         });
     }
