@@ -13,13 +13,13 @@
             </div>
     @endif
     <!-- form start -->
-            <form method="post" action="{{route('post.update', $post->id)}}">
+            <form method="post" action="{{route('tacles.update', $tacle->id)}}">
             @csrf
             @method('PUT')
                 <div class="card-body">
                     <div class="form-group">
                         <label >Добавить статью</label>
-                        <input type="text" name="title" class="form-control" value="{{ $post->title }}"  placeholder="Введите название статьи" required>
+                        <input type="text" name="title" class="form-control" value="{{ $tacle->title }}"  placeholder="Введите название статьи" required>
                     </div>
 
                     <div class="form-group">
@@ -51,15 +51,15 @@
                     </div>
 
                     <div class="form-group">
-                        <textarea value="{{ $post->text }}" class="editor" name="text">
-                            {{ $post->text }}
+                        <textarea value="{{ $tacle->text }}" class="editor" name="text">
+                            {{ $tacle->text }}
                         </textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="feature_image">Изображение статьи</label>
                         <img src="" alt="" style="display: block; width: 100px; margin: 20px" class="img_uploaded">
-                        <input type="text" value="{{ $post->img }}" name="img" id="feature_image" name="feature_image" value="" readonly>
+                        <input type="text" value="{{ $tacle->img }}" name="img" id="feature_image" name="feature_image" value="" readonly>
 
                         <a href="" class="popup_selector" data-inputid="feature_image">Выбрать изображение</a>
 

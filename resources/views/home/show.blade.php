@@ -17,7 +17,7 @@
                             <div class="col-12 col-sm-6">
                                 <h3 class="d-inline-block d-sm-none"></h3>
                                 <div class="col-12">
-                                    <img  src="{{$post->img}}" class="mb-3 product-image" alt="{{$post -> title}}">
+                                    <img  src="{{$tacles->img}}" class="mb-3 product-image" alt="{{$tacles -> title}}">
 
                                     <div class="mt-5">
 
@@ -51,7 +51,7 @@
 
 
                             <div class="col-12 col-sm-6">
-                                <h3 class="my-3">{{$post -> title}}</h3>
+                                <h3 class="my-3">{{$tacles -> title}}</h3>
                                 <hr>
 
 {{--                                <div class="form-group">--}}
@@ -81,7 +81,7 @@
                                     </nav>
                                     <div class="tab-content p-3" id="nav-tabContent">
                                         <div class="editor tab-pane fade active show" id="product-desc" role="tabpanel"
-                                             aria-labelledby="product-desc-tab">{!! $post->text !!}
+                                             aria-labelledby="product-desc-tab">{!! $tacles->text !!}
                                         </div>
                                         <div class="tab-pane fade" id="product-comments" role="tabpanel"
                                              aria-labelledby="product-comments-tab"> Vivamus rhoncus nisl sed venenatis luctus.

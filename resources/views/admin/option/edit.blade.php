@@ -14,35 +14,32 @@
             </div>
     @endif
     <!-- form start -->
-        <form method="post" action="#">
+
+        <form method="post" action="{{route('option.update', $option->id)}}">
             @csrf
-            <div class="card-body">
-                <div class="form-group">
-                    <label>Выбрать пост</label>
-                    <select name="category_id" class="form-control" required>
-
-                        @foreach($posts as $post)
-                            <option value="{{$post -> id}}">{{$post -> title}}</option>
-                        @endforeach
-
-                    </select>
-                </div>
+            @method('PUT')
+{{--            <div class="card-body">--}}
 {{--                <div class="form-group">--}}
-{{--                    <label >Заполнить дополнительные опции</label>--}}
-{{--                    @foreach($options as $option)--}}
-{{--                        <input type="text" value="{{$opti->name}}" name="name" class="form-control"  required>--}}
-{{--                        <input type="text" value="{{$opti->value}}" name="name" class="form-control"  required>--}}
-{{--                        <br>--}}
-{{--                    @endforeach--}}
+{{--                    <label>Название</label>--}}
+{{--                    <input type="text" name="name" value="{{$option['name']}}">--}}
 {{--                </div>--}}
-            </div>
-            <!-- /.card-body -->
-
-            <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Добавить</button>
-            </div>
+{{--                <div class="form-group">--}}
+{{--                    <label for="name_option">Значение</label>--}}
+{{--                    <input type="text" name="value" value="{{$option['value']}}">--}}
+{{--                </div>--}}
+{{--                <div class="card-footer">--}}
+{{--                    <button type="submit" class="btn btn-primary">Добавить</button>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </form>
-    </div>
 @endsection
 
 
+{{--@foreach($categories as $category)--}}
+{{--    <option value="{{$category -> id}}">{{$category -> title}}</option>--}}
+{{--    @if(count($category->subcategories)>0)--}}
+{{--        @foreach($category->options as $option)--}}
+{{--            <option value="{{$option -> id}}">&nbsp;&nbsp;{{$option -> name}}</option>--}}
+{{--        @endforeach--}}
+{{--    @endif--}}
+{{--@endforeach--}}

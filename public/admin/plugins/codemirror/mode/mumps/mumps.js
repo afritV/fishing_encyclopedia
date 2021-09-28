@@ -42,7 +42,7 @@
       // character belongs to the command or argument context.
 
       // Examine each character and update a mode variable whose interpretation is:
-      //   >0 => command    0 => argument    <0 => command post-conditional
+      //   >0 => command    0 => argument    <0 => command tacles-conditional
       var ch = stream.peek();
 
       if (ch == " " || ch == "\t") { // Pre-process <space>
@@ -53,7 +53,7 @@
           state.commandMode = 0;
       } else if ((ch != ".") && (state.commandMode > 0)) {
         if (ch == ":")
-          state.commandMode = -1;   // SIS - Command post-conditional
+          state.commandMode = -1;   // SIS - Command tacles-conditional
         else
           state.commandMode = 2;
       }

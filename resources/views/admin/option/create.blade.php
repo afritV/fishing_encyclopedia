@@ -18,17 +18,18 @@
             @csrf
             <div class="card-body">
                 <div class="form-group">
-                    <label>Выбрать подкатегорию</label>
-                    <select name="category_id" class="form-control" required>
+                    <label>Добавить опцию.</label>
+                    <div class="form-group">
+                        <select name="category_id" class="form-control" required>
 
-                        @foreach($categories as $category)
-                            <option value="{{$category -> id}}">{{$category -> title}}</option>
-                        @endforeach
-
-                    </select>
+                            @foreach($categories as $category)
+                                <option value="{{$category -> id}}">{{$category -> title}}</option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="name" class="form-control"  placeholder="Введите название опции" required>
+                    <input type="text" name="name" class="form-control" placeholder="Введите название опции" required>
                 </div>
             </div>
             <!-- /.card-body -->

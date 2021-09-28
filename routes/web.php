@@ -1,10 +1,11 @@
 <?php
 
 use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\TackleController;
 use App\Http\Controllers\Admin\SubcategoryController;
 use App\Http\Controllers\Admin\OptionController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Home\HomeController;
 use \App\Http\Controllers\Admin;
 
 /*
@@ -18,8 +19,8 @@ use \App\Http\Controllers\Admin;
 |
 */
 
-Route::get('/', [App\Http\Controllers\Home\HomeController::class, 'index'])->name('home.index');
-Route::get('/home/{post}', [App\Http\Controllers\Home\HomeController::class, 'show'])->name('show.post');
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('/home/{tacles}', [HomeController::class, 'show'])->name('show.tacles');
 
 Auth::routes();
 
@@ -29,7 +30,7 @@ Route::middleware(['role:admin'])->prefix('admin_panel')->group(function () {
 
     Route::resource('category', CategoryController::class);
     Route::resource('subcategory', SubcategoryController::class );
-    Route::resource('post', PostController::class);
+    Route::resource('tacles', TackleController::class);
     Route::resource('option', OptionController::class);
 });
 

@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Post;
+use App\Models\Tackle;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PostFactory extends Factory
@@ -12,7 +12,7 @@ class PostFactory extends Factory
      *
      * @var string
      */
-    protected $model = Post::class;
+    protected $model = Tackle::class;
 
     /**
      * Define the model's default state.

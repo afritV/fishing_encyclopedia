@@ -11,6 +11,11 @@ class Option extends Model
 
     public function category()
     {
-        return $this->BelongsTo(Category::class);
+        return $this->BelongsToMany(Category::class);
+    }
+
+    public function tacle()
+    {
+        return $this->BelongsToMany(Category::class);
     }
 }

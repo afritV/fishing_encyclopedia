@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Option;
-use App\Models\Post;
+use App\Models\Tackle;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
 class OptionController extends Controller
@@ -16,6 +17,11 @@ class OptionController extends Controller
      * @return \Illuminate\Http\Response
      */
         public function index(){
+            $categories = Category::orderBy('created_at','desc')->get();
+            $options = Option::all();
+            return view('admin.option.index',[
+                'options' => $options,
+            ]);
     }
 
 
@@ -27,7 +33,6 @@ class OptionController extends Controller
     public function create()
     {
         $categories = Category::orderBy('created_at','desc')->get();
-
         return view('admin.option.create',[
             'categories' => $categories,
         ]);
@@ -69,13 +74,12 @@ class OptionController extends Controller
      */
     public function edit(Option $option)
     {
-        dd($option);
-
-        $posts = Post::orderBy('created_at','desc')->get();
-//        $options= Option::orderBy('created_at','desc')->get();
+        $tacles = Tackle::all();
+        $categories = Category::orderBy('created_at','desc')->get();
         return view('admin.option.edit', [
             "option" => $option,
-            "posts" => $posts,
+            "categories" => $categories,
+            'tacles' => $tacles
         ]);
     }
 
@@ -88,11 +92,10 @@ class OptionController extends Controller
      */
     public function update(Request $request, Option $option)
     {
-        dd($option);
-        $subcategory->title = $request -> title;
-        $subcategory->category_id = $request -> category_id;
-        $subcategory->save();
-        return redirect()->back()->withSuccess('Подкатегория была успешно обновлена');
+        $option->name = $request -> name;
+        $option->value = $request -> value;
+        $option->save();
+        return redirect()->back()->withSuccess('Опция была успешно обновлена');
     }
 
     /**

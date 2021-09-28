@@ -9,7 +9,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Все посты</h3>
+            <h3 class="card-title">Все снасти</h3>
 
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -35,27 +35,27 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($posts as $post)
+                    @foreach($tacles as $tacle)
                     <tr>
                         <td>
-                            {{ $post -> id }}
+                            {{ $tacle -> id }}
                         </td>
                         <td>
-                            {{ $post -> title }}
+                            {{ $tacle -> title }}
                         </td>
 
                         <td class="text-center">
-                            <a class="btn btn-warning btn-sm" href="{{route('option.edit',$post['id'])}}">
+                            <a class="btn btn-warning btn-sm" href="{{route('option.edit',$tacle['id'])}}">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Добавить опцию
                             </a>
-                            <a class="btn btn-info btn-sm" href="{{route('post.edit',$post['id'])}}">
+                            <a class="btn btn-info btn-sm" href="{{route('tacles.edit',$tacle['id'])}}">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Редактировать
                             </a>
-                            <form method="Post" style="display: inline" action="{{route('post.destroy',$post['id'])}}">
+                            <form method="Post" style="display: inline" action="{{route('tacles.destroy',$tacle['id'])}}">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm" href="#">

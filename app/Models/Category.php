@@ -9,12 +9,12 @@ class Category extends Model
 {
     use HasFactory;
 
-    public function subcategories(){
-        return $this->hasMany(Subcategory::class);
+    public function options(){
+        return $this->belongsToMany(Option::class);
     }
 
-    public function options(){
-        return $this->hasMany(Option::class);
+    public function tacles(){
+        return $this->hasMany(Tackle::class);
     }
 
 

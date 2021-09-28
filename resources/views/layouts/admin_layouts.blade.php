@@ -84,12 +84,12 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{route('post.index')}}" class="nav-link ">
+                                <a href="{{route('tacles.index')}}" class="nav-link ">
                                     <p>Все снасти</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('post.create')}}" class="nav-link">
+                                <a href="{{route('tacles.create')}}" class="nav-link">
                                     <p>Добавить снасть</p>
                                 </a>
                             </li>
@@ -148,19 +148,19 @@
                         <a href="#" class="nav-link">
                             <i class="nav-icon  fas fa-envelope-open-text"></i>
                             <p>
-                                Подкатегории
+                                Опции
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{route('subcategory.index')}}" class="nav-link ">
-                                    <p>Все подкатегории</p>
+                                <a href="{{route('option.index')}}" class="nav-link ">
+                                    <p>Все опции</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('subcategory.create')}}" class="nav-link">
-                                    <p>Добавить подкатегорию</p>
+                                <a href="{{route('option.create')}}" class="nav-link">
+                                    <p>Добавить опцию</p>
                                 </a>
                             </li>
                         </ul>

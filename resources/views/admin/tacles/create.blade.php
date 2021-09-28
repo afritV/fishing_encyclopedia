@@ -13,7 +13,7 @@
             </div>
         @endif
         <!-- form start -->
-        <form method="post" action="{{route('post.store')}}">
+        <form method="post" action="{{route('tacles.store')}}">
             @csrf
             <div class="card-body">
                 <div class="form-group">
@@ -27,17 +27,13 @@
 
                         @foreach($categories as $category)
                             <option value="{{$category -> id}}">{{$category -> title}}</option>
-                            @if(count($category->subcategories)>0)
+{{--                            @if(count($category->subcategories)>0)--}}
 {{--                                @foreach($category->options as $option)--}}
 {{--                                    <option value="{{$option -> id}}">&nbsp;&nbsp;{{$option -> name}}</option>--}}
-
 {{--                                @endforeach--}}
-                            @endif
+{{--                            @endif--}}
                         @endforeach
                     </select>
-
-
-
                 </div>
                 <div class="form-group">
                     <textarea class="editor" name="text"></textarea>
@@ -52,16 +48,6 @@
 
                 </div>
             </div>
-            <!-- /.card-body -->
-
-                <div class="form-group">
-                    <label >Добавить опции</label>
-                    @foreach($options as $option)
-                        <input type="text" value="{{$option->name}}" name="name" class="form-control"  placeholder="Введите название опции" >
-                        <input type="text" name="value" class="form-control"  placeholder="Введите значение опции" >
-                    @endforeach
-
-                </div>
 
             <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Добавить</button>

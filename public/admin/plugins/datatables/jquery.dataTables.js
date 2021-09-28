@@ -5911,7 +5911,7 @@
 				}
 			};
 
-		// Build the sort array, with pre-fix and post-fix options if they have been
+		// Build the sort array, with pre-fix and tacles-fix options if they have been
 		// specified
 		if ( Array.isArray( fixed ) ) {
 			add( fixed );
@@ -10935,7 +10935,7 @@
 
 
 		/**
-		 * This function allows you to 'post process' each row after it have been
+		 * This function allows you to 'tacles process' each row after it have been
 		 * generated for each table draw, but before it is rendered on screen. This
 		 * function might be used for setting the row class name etc.
 		 *  @type function
