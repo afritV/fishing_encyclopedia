@@ -19,6 +19,12 @@ class TackleController extends Controller
     public function index()
     {
         $tacles = Tackle::orderBy('created_at', 'desc')->get();
+//        foreach ($tacles as $tacle){
+//            foreach ($tacle->options as $option){
+//                echo $option;
+//            }
+//        }
+
         return view('admin.tacles.index',[
             'tacles' => $tacles,
         ]);
@@ -32,11 +38,10 @@ class TackleController extends Controller
     public function create()
     {
         $categories = Category::orderBy('created_at', 'desc')->get();
-        $options = Option::orderBy('created_at', 'desc')->get();
-
+        $tacles = Tackle::orderBy('created_at', 'desc')->get();
         return view('admin.tacles.create', [
             'categories' => $categories,
-            "options" => $options,
+            "tacles" => $tacles,
         ]);
 
     }

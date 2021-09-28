@@ -31,9 +31,6 @@
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="{{route('home.index')}}" class="nav-link">Главная</a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Категории</a>
-                </li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->

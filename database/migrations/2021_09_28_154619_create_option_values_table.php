@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTackleOptionsTable extends Migration
+class CreateOptionValuesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateTackleOptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tackle_options', function (Blueprint $table) {
+        Schema::create('option_values', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('tackle_id')->nullable()->constrained();
-            $table->foreignId('option_id')->nullable()->constrained();
+            $table->string('value');
+            $table->foreignId('option_id')->constrained();
+            $table->foreignId('tackle_id')->constrained();
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateTackleOptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tackle_options');
+        Schema::dropIfExists('option_values');
     }
 }

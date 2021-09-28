@@ -9,12 +9,12 @@ class Tackle extends Model
 {
     use HasFactory;
 
-//    public function options(){
-//        return $this->hasManyThrough(Option::class, Category::class);
-//    }
+    public function options(){
+        return $this->belongsToMany(Option::class,'tackle_options');
+    }
 
-//    public function category(){
-//        return $this->belongsTo(Category::class);
-//    }
+    public function category(){
+        return $this->belongsTo(Category::class);
+    }
 
 }

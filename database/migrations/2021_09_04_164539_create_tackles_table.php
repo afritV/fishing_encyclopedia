@@ -18,7 +18,7 @@ class CreateTacklesTable extends Migration
             $table->string('title');
             $table->string('img');
             $table->text('text');
-            $table->foreignId('category_id')->nullable()->constrained();
+            $table->foreignId('category_id')->constrained();
             $table->timestamps();
         });
     }
